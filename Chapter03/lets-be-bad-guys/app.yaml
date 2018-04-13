@@ -1,0 +1,8 @@
+# [START runtime]
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT badguys.wsgi
+
+runtime_config:
+  python_version: 3.4
+# [END runtime]

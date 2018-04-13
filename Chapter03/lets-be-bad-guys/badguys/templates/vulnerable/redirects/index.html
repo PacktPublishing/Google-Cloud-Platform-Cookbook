@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ block.super }}: Unvalidated Redirects and Forwards{% endblock %}
+
+{% block header %}
+    <h2>Unvalidated Redirects and Forwards</h2>
+{% endblock %}
+
+{% block content %}
+    <p>Web applications frequently redirect and forward users to other pages and
+    websites, and use untrusted data to determine the destination pages. Without
+    proper validation, attackers can redirect victims to phishing or malware
+    sites, or use forwards to access unauthorized pages.</p>
+
+    <p>We'll look at:</p>
+    <ul>
+        <li><a href="{% url 'redirects-redirects' %}">External redirects</a></li>
+        <li><a href="{% url 'redirects-forwards' %}">Insecure forwards/bypass access control</a></li>
+    </ul>
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'components' %}">Prev</a></li>
+<li><a href="{% url 'redirects-redirects' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'components' %}">Prev</a></li>
+<li><a href="{% url 'redirects-redirects' %}">Next</a></li>
+{% endblock %}

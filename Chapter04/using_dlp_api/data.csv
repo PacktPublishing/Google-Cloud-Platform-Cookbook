@@ -1,0 +1,6 @@
+First Name, Last Name, Address, Mobile, email, Credit Card
+Robert, Bernista, '232, 95th Street, Wisconsin', +001-142-232-2387, testo@example.com, 9374 7363 8273 3943
+John, Shuman, '555 W Madison, Chicago', +001-312-223-3212, legorie@gmail.com, 7363 3637 2983 3234
+John, Shuman, '555 W Madison, Chicago', +001-312-223-3212, , 7363 3637 2983 3234
+Robert, Bernista, '232, 95th Street, Wisconsin', , testo@example, 9374 7363 8273 3943
+Bernie, Sanman, '232, 95th Street, Wisconsin', , testo@example.com, 9374 7363 8273 3943

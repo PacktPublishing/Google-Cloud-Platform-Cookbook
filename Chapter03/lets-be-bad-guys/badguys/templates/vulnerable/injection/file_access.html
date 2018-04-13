@@ -1,0 +1,47 @@
+{% extends "exercise_base.html" %}
+
+{% block title %}{{ block.super }}Malicious File Access{% endblock %}
+
+{% block header %}
+    <h1>Malicious File Access</h1>
+{% endblock %}
+
+{% block content %}
+    <p>Many sites use a dynamic URL to retrieve files for the user. A very
+    common implementation seems to be pulling user images like their profile
+    picture. Instead of using an ID or token these sites sometimes use partial
+    file paths. A clever individual could spot this and try to get our database
+    passwords, <code>/etc/passwd</code> file, or other sensitive data on our
+    filesystem.</p>
+
+    <p>Simple exercise: get the <code>settings.py</code> file to display on the screen.</p>
+    Example link: <a href="{% url 'user-pic' %}?p=hacker.jpg">{% url 'user-pic' %}?p=hacker.jpg</a>
+
+    {% if msg %}
+    <div class="hints panel">
+        <p>Hints:</p>
+        <ul>
+            <li>{{ msg }}</li>
+            <li>Think about navigating the file system.</li>
+        </ul>
+        <p><a class="tiny button" id="show_solution">show solution</a></p>
+    </div>
+    {% endif %}
+    <div class="solution panel"></div>
+
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script src="{{STATIC_URL}}js/exercises/injection-file-access.js"></script>
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'injection-sql' %}">Prev</a></li>
+<li><a href="{% url 'injection-code-execution' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'injection-sql' %}">Prev</a></li>
+<li><a href="{% url 'injection-code-execution' %}">Next</a></li>
+{% endblock %}

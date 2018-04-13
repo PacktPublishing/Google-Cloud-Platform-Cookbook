@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Welcome to the Jungle</h1>
+
+<div class="description">
+    <p>The Internet is a dangerous place, filled with evildoers out to attack
+    your code for fun or profit, so it's not enough to just ship your awesome
+    new web app--you have to take the security of your application, your users,
+    and your data seriously. You'll get into the mindset of the bad guys as we
+    discuss, exploit, and mitigate the most common web app security flaws in a
+    controlled environment.</p>
+
+    <p>See the <a href="{% url 'about' %}">full abstract</a>.</p>
+
+    <p><a class="button" href="{% url 'injection' %}">Get started!</a></p>
+
+</div>
+
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'injection' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'injection' %}">Next</a></li>
+{% endblock %}

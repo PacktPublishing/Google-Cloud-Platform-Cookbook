@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mysite-app
+  labels:
+    name: mysite
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: mysite
+    spec:
+      containers:
+      - image: gcr.io/gcp-cookbook/mysite
+        name: mysite
+        ports:
+        - name: http-server
+          containerPort: 8080

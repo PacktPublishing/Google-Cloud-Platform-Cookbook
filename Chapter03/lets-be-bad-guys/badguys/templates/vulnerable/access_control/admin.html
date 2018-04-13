@@ -1,0 +1,26 @@
+{% extends "exercise_base.html" %}
+
+{% block title %}{{ block.super }}Super-Secret Admin Interface{% endblock %}
+
+{% block header %}
+    <h1>Super-Secret Admin Interface</h1>
+{% endblock %}
+
+{% block content %}
+    <p>Welcome to the super-secret admin interface!</p>
+
+    <p>I sure hope no bad guys ever get in here!</p>
+
+    <p>It's not as common to use the querystring to grant privilege escalation, however, there
+    are still lots of cases where cookies are used.</p>
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'access-control' %}">Prev</a></li>
+<li><a href="{% url 'csrf' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'access-control' %}">Prev</a></li>
+<li><a href="{% url 'csrf' %}">Next</a></li>
+{% endblock %}

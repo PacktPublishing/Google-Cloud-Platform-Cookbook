@@ -1,0 +1,50 @@
+{% extends "exercise_base.html" %}
+
+{% block title %}{{ block.super }}XSS via Query Parameters{% endblock %}
+
+{% block header %}
+    <h1>XSS via Query Parameters</h1>
+{% endblock %}
+
+{% block content %}
+<p>We have all heard that it is very dangerous to blindly use user input
+in our pages. How easy is it to exploit? This page blindly uses the query
+string value in the JavaScript and as a result is insecure.</p>
+
+<p>In this exercise, add a new <code>&lt;img&gt;</code> element to the DOM. The
+source for the image needs to be <code>http://test/image.jpg</code> exactly.
+Bonus points if you figure out how to hide the image from the end user!</p>
+
+<div id="result"></div>
+
+<div class="hidden hints panel">
+    <p>This page has not yet been hacked. Some helpful hints:</p>
+    <ul>
+        <li>Look at the HTML and compare it to the query params</li>
+        <li>Your JavaScript must be escaped</li>
+        <li><code>document.createElement</code>, <code>.setAttribute</code> and <code>document.body.appendChild</code> are your friends.</li>
+        <li>Remember to terminate the statement you are trying to hijack</li>
+    </ul>
+    <a class="tiny button" id="show_solution">show solution</a>
+</div>
+<div class="solution panel"></div>
+
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script type="text/javascript">
+    var myvar = "{{qs|safe}}";
+</script>
+<script src="{{STATIC_URL}}js/exercises/xss-query.js"></script>
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'xss-path' 'your-path-here' %}">Prev</a></li>
+<li><a href="{% url 'xss-form' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'xss-path' 'your-path-here' %}">Prev</a></li>
+<li><a href="{% url 'xss-form' %}">Next</a></li>
+{% endblock %}

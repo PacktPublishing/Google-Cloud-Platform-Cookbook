@@ -1,0 +1,23 @@
+{% extends "exercise_base.html" %}
+
+{% block title %}{{ block.super }}Unable to Forward Request{% endblock %}
+
+{% block header %}
+    <h1>Unable to Forward Request</h1>
+{% endblock %}
+
+{% block content %}
+
+<p>Unable to forward to <code>{{ fwd }}</code>.  Try again?</p>
+
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'redirects-redirects' %}">Prev</a></li>
+<li><a href="{% url 'redirects-redirects' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'redirects-redirects' %}">Prev</a></li>
+<li><a href="{% url 'redirects-redirects' %}">Next</a></li>
+{% endblock %}

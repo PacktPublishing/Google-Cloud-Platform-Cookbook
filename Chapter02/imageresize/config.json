@@ -1,0 +1,18 @@
+{
+	"small": {
+		"name":"small",
+		"min": 50,
+		"max": 50
+	},
+	"medium": {
+		"name":"medium",
+		"min": 75,
+		"max": 75
+	},
+	"large": {
+		"name":"large",
+		"min": 100,
+		"max": 100
+	}
+}
+

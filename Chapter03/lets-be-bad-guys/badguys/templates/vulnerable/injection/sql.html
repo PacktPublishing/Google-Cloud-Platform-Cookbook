@@ -1,0 +1,60 @@
+{% extends "exercise_base.html" %}
+
+{% block title %}{{ block.super }}SQL Injection{% endblock %}
+
+{% block header %}
+    <h1>SQL Injection</h1>
+{% endblock %}
+
+{% block content %}
+    <p>This page mimics a very simple SQL injection attack. Imagine a site
+    where you are registering a user profile. Could a name really hurt you?
+    Give it a try and see what you can do.</p>
+
+    <p>Simple exercise: you know that the shoddy registration software this
+    site is using builds SQL by concatenating unsanitized user input. Please
+    inject the query <code>DROP TABLE Users</code> into the SQL.</p>
+
+    <fieldset>
+        <form method="POST">
+            <label for="name">Name</label>
+            <input name="name" value="{{ name }}">
+            <input type="submit">
+        </form>
+    </fieldset>
+
+    {% if name %}
+        {% if correct %}
+            <div class="answer panel">
+                <p>Correct. You are successfully creating a bad query:</p>
+                <code>{{ solution_sql }}</code>
+            </div>
+        {% else %}
+            <div class="hints panel">
+                <p>Almost. Keep trying, you'll get it. Helpful hints:</p>
+                <ul>
+                    <li>end the original query</li>
+                    <li>end your input with '<code>--</code>' (SQL comment)</li>
+                    <li><a href="http://xkcd.com/327/">solved by a cartoon?</a></li>
+                </ul>
+                <a class="tiny button" id="show_solution">show solution</a>
+            </div>
+        {% endif %}
+    {% endif %}
+    <div class="solution panel"></div>
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'injection' %}">Prev</a></li>
+<li><a href="{% url 'injection-file-access' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'injection' %}">Prev</a></li>
+<li><a href="{% url 'injection-file-access' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script src="{{STATIC_URL}}js/exercises/injection-sql.js"></script>
+{% endblock %}

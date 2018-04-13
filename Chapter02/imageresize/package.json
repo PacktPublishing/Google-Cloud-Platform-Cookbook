@@ -1,0 +1,10 @@
+{
+  "name": "imageresize",
+  "version": "0.0.1",
+  "dependencies": {
+    "@google-cloud/storage": "1.2.1",
+    "request": "2.81.0",
+    "async": "latest",
+    "sharp": "^0.18.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "project_id": "bold-future-200221",
+      "source_image": "debian-9-stretch-v20180401",
+      "ssh_username": "debian",
+      "zone": "us-central1-a"
+    }
+  ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline":[
+                "sudo apt-get install -y apache2",
+                "sudo apt-get install -y php git",
+                "sudo systemctl restart apache2"
+            ]
+        },
+        {
+            "type": "shell",
+            "script": "./pull-code.sh"
+        }
+    ]
+}

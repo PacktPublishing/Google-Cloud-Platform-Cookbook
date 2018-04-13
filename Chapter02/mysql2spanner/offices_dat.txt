@@ -1,0 +1,9 @@
+offices
+('officeCode', 'city', 'phone', 'addressLine1', 'addressLine2', 'state', 'country', 'postalCode', 'territory')
+(u'1',u'San Francisco',u'+1 650 219 4782',u'100 Market Street',u'Suite 300',u'CA',u'USA',u'94080',u'NA')
+(u'2',u'Boston',u'+1 215 837 0825',u'1550 Court Place',u'Suite 102',u'MA',u'USA',u'02107',u'NA')
+(u'3',u'NYC',u'+1 212 555 3000',u'523 East 53rd Street',u'apt. 5A',u'NY',u'USA',u'10022',u'NA')
+(u'4',u'Paris',u'+33 14 723 4404',u'43 Rue Jouffroy D\'abbans',None,None,'France',u'75017',u'EMEA')
+(u'5',u'Tokyo',u'+81 33 224 5000',u'4-1 Kioicho',None,'Chiyoda-Ku',u'Japan',u'102-8578',u'Japan')
+(u'6',u'Sydney',u'+61 2 9264 2451',u'5-11 Wentworth Avenue',u'Floor #2',None,'Australia',u'NSW 2010',u'APAC')
+(u'7',u'London',u'+44 20 7877 2041',u'25 Old Broad Street',u'Level 7',None,'UK',u'EC2N 1HN',u'EMEA')

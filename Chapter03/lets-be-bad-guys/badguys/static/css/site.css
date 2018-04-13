@@ -1,0 +1,59 @@
+.answer, .hints, .solution {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.answer p {
+    color: green;
+    margin: 0;
+}
+
+.solution {
+    display: none;
+}
+
+.solution h4 {
+    margin: 0;
+}
+
+.solution p {
+    color: darkblue;
+    margin: 15px 0 0 0;
+}
+
+.hints p {
+    color: red;
+    margin: 0;
+}
+.hints ul {
+    margin-bottom: 5px;
+}
+
+#content {
+    padding-left: 3em;
+	margin-bottom: 2em;
+}
+
+#content ul {
+	list-style-position: inside;
+}
+
+#content li {
+    margin-left: 1em;
+}
+
+aside ul {
+	font-size: 10pt;
+}
+
+hgroup h1 {
+	font-size: 20pt;
+	margin-bottom: -0.2em;
+}
+hgroup h2 {
+	font-size: 14pt;
+}
+
+.hidden {
+    display: none;
+}

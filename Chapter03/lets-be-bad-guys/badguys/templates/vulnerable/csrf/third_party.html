@@ -1,0 +1,51 @@
+{% extends "exercise_base.html" %}
+
+{% block title %}{{ block.super }}CSRF from a Third-Party Site{% endblock %}
+
+{% block header %}
+    <h1>CSRF from a Third-Party Site</h1>
+{% endblock %}
+
+{% block content %}
+
+<p>As an evil genius you are interested in tricking unsuspecting users into
+giving you gift cards. We're going to simulate an attack from an
+innocent-looking but secretly evil third-party site by enticing the victim
+to gaze at adorable cat photos.</p>
+
+<p>Open up the template for this page --
+<code>badguys/templates/vulnerable/csrf/third_party.html</code> --
+in your editor and create an innocent-looking form that will POST data to the
+vulnerable <a href="{% url 'csrf-gift-card' %}">gift card</a> form.
+There will be an HTML comment inviting you to add the form.</p>
+
+<ul>
+    <li>Your email address is <code>evil@evil.com</code></li>
+    <li>You want $100 giftcards (the field expects an integer)</li>
+    <li>All inputs (except the submit) should be hidden</li>
+    <li>Your submit button should say <code>View Photos</code> because that looks innocent</li>
+</ul>
+
+<!-- put your form here
+
+<form><input></form>
+
+-->
+
+{% endblock %}
+
+
+{% block extra_head %}
+<script src="{{STATIC_URL}}js/vendor/jquery.js"></script>
+<script src="{{STATIC_URL}}js/exercises/csrf-third-party.js"></script>
+{% endblock %}
+
+{% block extra_topnav %}
+<li><a href="{% url 'csrf-image' %}">Prev</a></li>
+<li><a href="{% url 'components' %}">Next</a></li>
+{% endblock %}
+
+{% block extra_botnav %}
+<li><a href="{% url 'csrf-image' %}">Prev</a></li>
+<li><a href="{% url 'components' %}">Next</a></li>
+{% endblock %}
