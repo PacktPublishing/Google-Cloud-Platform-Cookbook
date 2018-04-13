@@ -9,6 +9,9 @@ Finally, we cover administration troubleshooting tasks with compute and containe
 ## Instructions and Navigation
 All of the code is organized into folders. For example, Chapter02.
 
+=======================================================================================================================================
+                                                 Important
+=======================================================================================================================================                                                 
 Install the Google Cloud SDK: https://cloud.google.com/sdk/docs/
 
 For testing Python code, install the Google Cloud Client Library for Python:
