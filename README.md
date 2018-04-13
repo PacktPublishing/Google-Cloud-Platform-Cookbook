@@ -19,9 +19,7 @@ All of the code is organized into folders. For example, Chapter02.
 
 * Or: https://googlecloudplatform.github.io/google-cloud-python/
 
-* For testing NodeJS code, you can do an npm install of the required Node.js packages:
-
-      https://cloud.google.com/nodejs/docs/reference/libraries
+* For testing NodeJS code, you can do an npm install of the required Node.js packages:     https://cloud.google.com/nodejs/docs/reference/libraries
 
 The code will look like the following:
 ```
