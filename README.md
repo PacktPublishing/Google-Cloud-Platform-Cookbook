@@ -15,13 +15,13 @@ All of the code is organized into folders. For example, Chapter02.
 
 * For testing Python code, install the Google Cloud Client Library for Python:
 
-    pip install google-cloud
+      pip install google-cloud
 
 * Or: https://googlecloudplatform.github.io/google-cloud-python/
 
 * For testing NodeJS code, you can do an npm install of the required Node.js packages:
 
-     https://cloud.google.com/nodejs/docs/reference/libraries
+      https://cloud.google.com/nodejs/docs/reference/libraries
 
 The code will look like the following:
 ```
