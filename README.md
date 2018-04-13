@@ -17,7 +17,7 @@ All of the code is organized into folders. For example, Chapter02.
 
       pip install google-cloud
 
-* Or Use this [repository](https://googlecloudplatform.github.io/google-cloud-python/)
+* Or use this [repository](https://googlecloudplatform.github.io/google-cloud-python/)
 
 * For testing Node.js code, you can do an **npm install** of the required Node.js [packages](https://cloud.google.com/nodejs/docs/reference/libraries)
 
