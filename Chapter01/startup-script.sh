@@ -27,8 +27,8 @@ service google-fluentd restart &
 # [END logging]
 
 # Installing mongodb
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
-echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+curl https://www.mongodb.org/static/pgp/server-4.0.asc | sudo apt-key add -
+echo "deb http://repo.mongodb.org/apt/debian stretch/mongodb-org/4.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 apt-get update
 apt-get install -y mongodb-org
 cat > /etc/systemd/system/mongodb.service << EOF
@@ -49,7 +49,7 @@ apt-get install -yq ca-certificates git nodejs build-essential supervisor
 
 # Install nodejs
 mkdir /opt/nodejs
-curl https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz | tar xvzf - -C /opt/nodejs --strip-components=1
+curl https://nodejs.org/dist/v9.9.0/node-v9.9.0-linux-x64.tar.gz | tar xvzf - -C /opt/nodejs --strip-components=1
 ln -s /opt/nodejs/bin/node /usr/bin/node
 ln -s /opt/nodejs/bin/npm /usr/bin/npm
 
@@ -58,6 +58,7 @@ ln -s /opt/nodejs/bin/npm /usr/bin/npm
 export HOME=/root
 git config --global credential.helper gcloud.sh
 git clone https://source.developers.google.com/p/gcp-cookbook/r/gcpcookbook  /opt/app
+#[can be used, if needed]git clone https://github.com/PacktPublishing/Google-Cloud-Platform-Cookbook.git  /opt/app
 
 # Install app dependencies
 cd /opt/app/Chapter01/mysite
