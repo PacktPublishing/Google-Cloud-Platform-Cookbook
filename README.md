@@ -45,3 +45,7 @@ Due to the rapid evolution of tools and dependencies, there is the possibility o
 * [Kubernetes for Serverless Applications](https://www.packtpub.com/networking-and-servers/kubernetes-serverless-applications?utm_source=github&utm_medium=repository&utm_campaign=9781788620376)
 
 * [Google Cloud Platform (GCP) - For Techs [Video]](https://www.packtpub.com/application-development/google-cloud-platform-gcp-techs-video?utm_source=github&utm_medium=repository&utm_campaign=9781789137668)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781788291996">https://packt.link/free-ebook/9781788291996 </a> </p>
